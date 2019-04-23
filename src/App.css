@@ -9,3 +9,8 @@ nav {
 .active {
   color: red;
 }
+
+.btn-white-background {
+  background: white;
+  color: red;
+}

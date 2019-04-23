@@ -1,4 +1,4 @@
-import { getCourses } from "../api/courseApi";
+import { getCourses, saveCourse, deleteCourse } from "../api/courseApi";
 
 export const fetchCourses = () => {
   return dispatch => {
@@ -7,6 +7,32 @@ export const fetchCourses = () => {
       return dispatch({
         type: "GET_COURSES",
         courses: courses
+      });
+    });
+  };
+};
+
+export const addCourse = course => {
+  console.log("from actions", course);
+  return dispatch => {
+    saveCourse(course).then(() => {
+      console.log("priniting from addCourse", course);
+      return dispatch({
+        type: "ADD_COURSE",
+        course: course
+      });
+    });
+  };
+};
+
+export const removeCourse = courseId => {
+  console.log("Got ID to delete", courseId);
+  return dispatch => {
+    deleteCourse(courseId).then(() => {
+      console.log("Deleted", courseId);
+      return dispatch({
+        type: "DELETE_COURSE",
+        courseId: courseId
       });
     });
   };

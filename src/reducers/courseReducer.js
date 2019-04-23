@@ -5,6 +5,20 @@ const courseReducer = (state = initState.courses, action) => {
     case "GET_COURSES":
       console.log(action);
       return action.courses;
+    case "ADD_COURSE":
+      console.log("ADD COURSE FIRED");
+      console.log(action);
+      console.log([...state, action.course]);
+
+      return [...state, action.course];
+    case "DELETE_COURSE":
+      console.log("DELETE COURSE FIRED");
+      let courseId = action.courseId;
+      let courses = state.filter(course => {
+        return course.id != courseId;
+      });
+      console.log(courses);
+      return courses;
     default:
       return state;
   }

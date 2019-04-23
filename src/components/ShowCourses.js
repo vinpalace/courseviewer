@@ -5,7 +5,6 @@ import ShowAuthor from "./ShowAuthor";
 
 const ShowCourses = props => {
   const { courses } = props;
-  console.log("frm showcourses", courses);
   return (
     <div className="courselist">
       <Link to="/course" className="btn btn-lg btn-primary">
@@ -18,11 +17,18 @@ const ShowCourses = props => {
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Category</th>
+            <th scope="col" />
           </tr>
         </thead>
         <tbody>
           {courses.map(course => {
-            return <ShowCourse course={course} authors={props.authors} />;
+            return (
+              <ShowCourse
+                key={course.id}
+                course={course}
+                authors={props.authors}
+              />
+            );
           })}
         </tbody>
       </table>

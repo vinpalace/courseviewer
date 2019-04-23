@@ -7,6 +7,7 @@ import Courses from "./components/Courses";
 import NotFound from "./components/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import AddCourse from "./components/AddCourse";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/courses" component={Courses} />
+          <Route path="/course" component={AddCourse} />
           <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>
