@@ -8,10 +8,8 @@ import * as serviceWorker from "./serviceWorker";
 import rootReducer from "./reducers/rootReducer";
 import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
-
+import watchAll from "./sagas/saga";
 const sagaMiddilware = createSagaMiddleware();
-
-//sagaMiddilware.run();
 
 const store = createStore(
   rootReducer,
@@ -20,6 +18,8 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+
+sagaMiddilware.run(watchAll);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -58,6 +58,15 @@
       "createdAt": 1556267531995,
       "slug": "new-add-course-title",
       "id": 15
+    },
+    {
+      "authorId": 2,
+      "title": "Updated everything with Saga",
+      "category": "woooahh",
+      "author": "Scott Allen",
+      "createdAt": 1556278559951,
+      "slug": "updated-everything-with-saga",
+      "id": 16
     }
   ],
   "authors": [
