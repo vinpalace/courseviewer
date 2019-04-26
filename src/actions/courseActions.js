@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { getCourses, saveCourse, deleteCourse } from "../api/courseApi";
+=======
+import { getCourses } from "../api/courseApi";
+>>>>>>> Saving
 
 export const fetchCourses = () => {
   return dispatch => {
@@ -11,6 +15,7 @@ export const fetchCourses = () => {
     });
   };
 };
+<<<<<<< HEAD
 
 export const addCourse = course => {
   console.log("from actions", course);
@@ -37,3 +42,5 @@ export const removeCourse = courseId => {
     });
   };
 };
+=======
+>>>>>>> Saving

@@ -20,13 +20,20 @@ class Courses extends Component {
   // };
 
   componentDidMount() {
+<<<<<<< HEAD
     console.log("Component mounted and getting courses and authors");
+=======
+    console.log("Component mounted and getting courses");
+>>>>>>> Saving
     this.props.fetchCourses();
     this.props.fetchAuthors();
   }
 
   render() {
+<<<<<<< HEAD
     console.log("from courses", this.props.courses);
+=======
+>>>>>>> Saving
     return (
       <div className="course-list container">
         <h1>Courses</h1>

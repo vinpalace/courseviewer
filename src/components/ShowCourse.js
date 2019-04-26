@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ShowAuthor from "./ShowAuthor";
+<<<<<<< HEAD
 import { removeCourse } from "../actions/courseActions";
 import { connect } from "react-redux";
+=======
+>>>>>>> Saving
 
 const ShowCourse = props => {
   const course = props.course;
@@ -18,6 +21,7 @@ const ShowCourse = props => {
         <ShowAuthor authorId={course.authorId} authors={props.authors} />
       </td>
       <td>{course.category}</td>
+<<<<<<< HEAD
       <td>
         <button
           onClick={() => {
@@ -28,10 +32,13 @@ const ShowCourse = props => {
           Delete
         </button>
       </td>
+=======
+>>>>>>> Saving
     </tr>
   );
 };
 
+<<<<<<< HEAD
 const mapDispatchToProps = dispatch => {
   return {
     removeCourse: courseId => {
@@ -44,3 +51,6 @@ export default connect(
   null,
   mapDispatchToProps
 )(ShowCourse);
+=======
+export default ShowCourse;
+>>>>>>> Saving

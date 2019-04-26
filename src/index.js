@@ -1,12 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+<<<<<<< HEAD
 import { createStore, applyMiddleware, compose } from "redux";
+=======
+import { createStore, applyMiddleware } from "redux";
+>>>>>>> Saving
 import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import rootReducer from "./reducers/rootReducer";
 import thunk from "redux-thunk";
+<<<<<<< HEAD
 import createSagaMiddleware from "redux-saga";
 
 const sagaMiddilware = createSagaMiddleware();
@@ -20,6 +25,10 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+=======
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+>>>>>>> Saving
 
 ReactDOM.render(
   <Provider store={store}>
