@@ -7,10 +7,7 @@ import Courses from "./components/Courses";
 import NotFound from "./components/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-<<<<<<< HEAD
 import AddCourse from "./components/AddCourse";
-=======
->>>>>>> Saving
 
 function App() {
   return (
@@ -20,10 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/courses" component={Courses} />
-<<<<<<< HEAD
           <Route path="/course" component={AddCourse} />
-=======
->>>>>>> Saving
           <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>

@@ -4,7 +4,6 @@
 }
 nav {
   padding: 20px 0;
-<<<<<<< HEAD
 }
 
 .active {
@@ -13,10 +12,5 @@ nav {
 
 .btn-white-background {
   background: white;
-=======
-}
-
-.active {
->>>>>>> Saving
   color: red;
 }

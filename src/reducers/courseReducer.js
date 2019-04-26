@@ -5,7 +5,6 @@ const courseReducer = (state = initState.courses, action) => {
     case "GET_COURSES":
       console.log(action);
       return action.courses;
-<<<<<<< HEAD
     case "ADD_COURSE":
       console.log("ADD COURSE FIRED");
       console.log(action);
@@ -20,8 +19,6 @@ const courseReducer = (state = initState.courses, action) => {
       });
       console.log(courses);
       return courses;
-=======
->>>>>>> Saving
     default:
       return state;
   }
